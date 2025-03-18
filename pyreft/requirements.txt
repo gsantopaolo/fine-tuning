@@ -1,0 +1,17 @@
+# Install Pytorch & other libraries
+# --no-build-isolation needed for flash-attn
+# Preinstall cudatoolkit and torch Before Installing the Requirements File
+# then install the remaining packages with the --no-build-isolation flag.
+# conda install -c conda-forge cudatoolkit-dev
+# pip install torch==2.4.1
+# pip install --no-build-isolation -r requirements.txt
+
+# to test:
+# # python -c "import torch; major, minor = torch.cuda.get_device_capability(); assert major >= 8, 'Hardware not supported for Flash Attention'; print(f'Compute capability (version): {major}.{minor} — your hardware is supported')"
+torch==2.4.1
+transformers==4.46.3
+peft==0.13.2
+hf-transfer==0.1.8
+nvitop
+matplotlib
+pyreft
